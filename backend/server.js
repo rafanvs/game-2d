@@ -16,7 +16,7 @@ io.on('connection', (socket) => {
     console.log("Jogador conectado: " + socket.id);
 
     // Definindo a posição inicial do jogador
-    players[socket.id] = { x: 50, y: 50, direction: 0, frame: 0 };
+    players[socket.id] = { x: 0, y: 0, direction: 0, frame: 0 };
 
     // Emitindo a lista de jogadores para o novo jogador
     io.emit("players", players);
